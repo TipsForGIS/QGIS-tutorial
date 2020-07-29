@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QGIS sample tutorial</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding: 4% 2%;
+      }
+
+      hr.margin {
+        margin: 3% 0;
+      }
+
+      .tVideo{
+          margin-top: 1%;
+          margin-left: 10%;
+          width: 80%;
+          height: 40%;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+    <!-- navigation goes here -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+            <div style="background-color:#00A78D; color:white !important" class="page-header well">
+                <h2>How to create a new shapefile and new features?</h2>
+            </div>
+
+            <p>For this tutorial, we will use a plugin named OpenLayers Plugin.
+              This plugin allows us to add basemaps from Google, Bing, and Open Street Map.
+            We will use the basemap as a reference for our digitization.
+          Let's start with this tutorial through the following steps.</p><br/>
+            <p>1. Open QGIS and go to the plugin menu &#8594; Manage and Install Plugins...</p>
+            <br/>
+              <img src="images/p1.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>2. Now the plugins window is open, type the word openlayers in the Search box.
+            Then a list of plugins appear below, select the right one according to the following figure.
+          Now click the Install plugin button.</p>
+            <br/>
+            <img src="images/p2.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>Under the web menu, you should see a new added sub menu for the OpenLayers plugin.</p>
+            <br/>
+            <img src="images/p3.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>3. Select web &#8594; OpenLayers plugin &#8594; Google Maps &#8594; Google Satellite as illustrated
+              in the following figure. If you wish to select another basemap, feel free to do so.</p>
+            <br/>
+            <img src="images/p4.png" height="250" width="320" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>I have zoomed to Manhattan area in New York City. The center coordiantes
+             and the scale level are shown below. You can practice in a different area.</p>
+            <br/>
+            <img src="images/p5.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/>
+            <img src="images/p6.png" class="img-fluid" alt="Responsive image">
+            <br/>
+            <br/><br/>
+            <p>4. Click on the New Shapefile Layer button.</p>
+            <br/>
+            <img src="images/p7.png" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p> a new window appears with the title New Shapfile Layer.</p>
+            <br/>
+            <img src="images/p8.png" height="420" width="470" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>5. Click on the button highlighted below for selecting the CRS. CRS stands for coordiante refernce system.
+            We need to change it to the web mercator projection to match the Google's projection.
+            Type in 3857 to filter the CRSs. By the way, most web maps use the
+              web mercator projection including OSM, OpenLayers, Carto, Leaflet, and Bing.</p>
+            <br/>
+            <img src="images/p9.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>6. Now select the type line. Then create a new field called st_name with the text data type and length of 50.
+             Click the Add to fields list button then click OK.</p>
+            <br/>
+            <img src="images/p10.png" height="420" width="480" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>7. A save prompt window will appear. Save the file in a folder of your choice. Since a Mac is used for this tutorial,
+            you don't need to specify the extension ".shp". If you are using Windows, double check if you need to type in the extension or not.</p>
+            <br/>
+            <img src="images/p11.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>8. Notice that the streets shapefile is added to the Layers Panel.
+            Now double click on the streets' symbology as highlighted below to change it.</p>
+            <br/>
+            <img src="images/p12.png" height="240" width="320" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>9. Change the color and the width of the line. Red and 1.5 values are selected respectively.
+            Select whatever options you like.</p>
+            <br/>
+            <img src="images/p13.png" height="380" width="500" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>10. Now we are ready to create features. Make sure that the streets layer is on top of
+             the Google Maps layer in the Layers Panel. Click on the Toggle Editing button to activate
+             the editing mode.
+            </p>
+            <br/>
+            <img src="images/p14.png" height="220" width="320" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>11. On the map, click anywhere and then move the mouse cursor. Then click again at a second location.
+            You can continue with that and draw multiple line segments. Here we are just drawing one segment. To save the feature,
+          hit the right mouse button. Let's explain it again, click on the start point &#8594; click again at the end point
+        &#8594; right click to stop digitizing and to save the feature.</p>
+            <br/>
+            <img src="images/p15.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>12. After the right click, a small window will appear for the attributes. Fill in the id and st_name.</p>
+            <br/>
+            <img src="images/p16.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>The following attributes were entered for two different features.</p>
+            <br/>
+            <img src="images/p17.png" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <img src="images/p18.png" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>13. Click on the Save Layer Edits button highlighted below.</p>
+            <br/>
+            <img src="images/p19.png" height="220" width="320" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>14. The features are now saved. Right click on the streets layer and select Open Attribute Table.</p>
+            <br/>
+            <img src="images/p20.png" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>You should see the attributes of the features you created.</p>
+            <br/>
+            <img src="images/p21.png" height="420" width="600" class="img-fluid" alt="Responsive image">
+            <br/><br/>
+            <p>This is the end of this tutorial. If you have any question, please use the contact page for help.</p>
+
+        <hr style="width: 100%; color: black; height: 1px; background-color:black;" class="margin">
+
+        <footer>
+          <p><small>Created by Ahmad Aburizaiza </small></p>
+        </footer>
+
+    </div><!-- /.container -->
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QGIS sample tutorial</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding: 4% 2%;
+      }
+
+      hr.margin {
+        margin: 3% 0;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+    <!-- navigation goes here -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+   		<!--Page header -->
+   		<div style="background-color:#00A78D; color:white !important" class="page-header jumbotron">
+        <h2>Welcome!</h2>
+              <p>This website contains four tutorials about QGIS, three of these are video based.</p>
+              <p>The tutorials are:</p>
+              <ul>
+                  <li>Creating new shapefiles and new features</li>
+                  <li>Geocoding process in QGIS</li>
+                  <li>Getting Open Street Map data through QGIS</li>
+                  <li>Converting to GeoJSON in QGIS and GeoJSON.io</li>
+              </ul>
+        </div>
+
+
+        <!--1st row -->
+        <!--thumbnails-->
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <img src="images/create.png" alt="#">
+                <div class="caption">
+                	<h3>Create new data</h3>
+                	<p>Learn how to create a new shapefile and add new features</p>
+                	<a href="create.html" type="button" class="btn btn-primary">Start tutorial</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <img src="images/geocoding.jpg" alt="#">
+                <div class="caption">
+                	<h3>Geocode</h3>
+                	<p>Geocoding is transforming address descriptions into GIS points</p>
+                	<a href="geocode.html" type="button" class="btn btn-primary">Watch video</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <img src="images/osm.jpg" alt="#">
+                <div class="caption">
+                	<h3>Get OSM data</h3>
+                	<p>Open Street Map or OSM is a geo-crowdsourcing data source</p>
+                	<a href="osm.html" type="button" class="btn btn-primary">Watch video</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <img src="images/geojson.jpg" alt="#">
+                <div class="caption">
+                	<h3>Get GeoJSON</h3>
+                	<p>GeoJSON is a well known GIS data format</p>
+                	<a href="geojson.html" type="button" class="btn btn-primary">Watch video</a>
+                </div>
+              </div>
+            </div>
+
+        </div><!-- /.row -->
+
+        <hr style="width: 100%; color: black; height: 1px; background-color:black;" class="margin">
+
+        <footer>
+          <p><small>Created by Ahmad Aburizaiza </small></p>
+        </footer>
+
+    </div><!-- /.container -->
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
